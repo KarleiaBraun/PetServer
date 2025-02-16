@@ -12,9 +12,12 @@ data class CreateServicoRequest(
     @field:NotBlank
     val descricao: String?,
 
+    @field:NotNull
+    val preco: Double?,
 ) {
     fun toServico () = Servico(
         titulo = titulo!!,
-        descricao = descricao!!
+        descricao = descricao!!,
+        preco = preco!!
     )
 }
