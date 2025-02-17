@@ -5,8 +5,6 @@ import com.braun.karleia.PetServer.agenda.AgendaService
 import com.braun.karleia.PetServer.agenda.controller.requests.CreateAgendaRequest
 import com.braun.karleia.PetServer.agenda.controller.responses.AgendaResponse
 import com.braun.karleia.PetServer.users.SortDir
-import com.braun.karleia.PetServer.users.controller.responses.UserResponse
-import org.springframework.cglib.core.Local
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.time.LocalDateTime

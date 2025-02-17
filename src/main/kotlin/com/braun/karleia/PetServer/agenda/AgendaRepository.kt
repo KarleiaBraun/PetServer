@@ -9,7 +9,7 @@ interface AgendaRepository: JpaRepository<Agenda, Long>{
     fun findByDateTime(dateTime: LocalDateTime): List<Agenda>
     @Query("select distinct a from Agenda a" +
             " join a.idServico s" +
-            " where LOWER(s.titulo) = LOWER(:titulo)" +
+            " where LOWER(s.titulo) LIKE LOWER(CONCAT('%', :titulo, '%'))" +
             " order by a.dateTime")
     fun findByTituloServico(@Param("titulo") titulo: String): List<Agenda>
 }
